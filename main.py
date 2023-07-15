@@ -35,10 +35,10 @@ def get_recipe_suggestions(ingredients):
 # pass this array into recipe suggestions. 
 # it is making a recipe suggestion based on the parameter you give
 ingredients = []
-recipe1 = input('Enter desired ingredients: ')
-recipe2 = input('Enter desired ingredients: ')
+recipe1 = input('Enter desired ingredient: ')
+recipe2 = input('Enter desired ingredient: ')
 
-ingredients.append(recipe1)
+ingredients.append(recipe1)        
 ingredients.append(recipe2)
 
-get_recipe_suggestions(ingredients)
+get_recipe_suggestions(ingredients)                 
