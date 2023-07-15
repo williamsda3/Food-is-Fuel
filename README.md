@@ -6,4 +6,6 @@
 
 
 -------------TODO---------------
-* Set up the main 'flow' (flask and templating)
+* Set up the main 'flow' (base experience)
+ - Entering ingredients
+ - Displaying recipe

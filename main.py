@@ -9,7 +9,7 @@ def get_recipe_suggestions(ingredients):
     params = {
         'apiKey': API_KEY,
         'includeIngredients': ','.join(ingredients),
-        'number': 3  # Number of recipe suggestions to retrieve
+        'number': number  # Number of recipe suggestions to retrieve
     }
 
     response = requests.get(endpoint, params=params)
@@ -22,10 +22,16 @@ def get_recipe_suggestions(ingredients):
     else:
         print('Failed to retrieve recipe suggestions.')
 
+
 # Example usage
+number = input('Number of recipe suggestions \n>> ')
+
+# Creating an array to hold the ingredients
 ingredients = []
-recipe1 = input('Enter a recipe: ')
-recipe2 = input('Enter a recipe: ')
+
+
+recipe1 = input('Enter a desired ingredient: \n>> ')
+recipe2 = input('Enter a desired ingredient: \n>> ')
 
 ingredients.append(recipe1)
 ingredients.append(recipe2)
