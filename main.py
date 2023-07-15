@@ -1,13 +1,15 @@
+# Importing the request module
 import requests
 
 API_KEY = '33edc764ecf341ef9b75704f6297816e'
 
+# Creating a function to return recipe suggestions based on ingredients passed
 def get_recipe_suggestions(ingredients):
     endpoint = 'https://api.spoonacular.com/recipes/complexSearch'
     params = {
         'apiKey': API_KEY,
         'includeIngredients': ','.join(ingredients),
-        'number': 1  # Number of recipe suggestions to retrieve
+        'number': 3  # Number of recipe suggestions to retrieve
     }
 
     response = requests.get(endpoint, params=params)
@@ -21,5 +23,11 @@ def get_recipe_suggestions(ingredients):
         print('Failed to retrieve recipe suggestions.')
 
 # Example usage
-ingredients_list = [ 'bread', 'chocolate']
-get_recipe_suggestions(ingredients_list)
+ingredients = []
+recipe1 = input('Enter a recipe: ')
+recipe2 = input('Enter a recipe: ')
+
+ingredients.append(recipe1)
+ingredients.append(recipe2)
+
+get_recipe_suggestions(ingredients)
